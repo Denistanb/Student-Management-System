@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Update Student</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Update Student</h1>
+        <form action="/update_student" method="POST">
+            <input type="hidden" id="student_id" name="student_id" value="{{ student_id }}">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" value="{{ student.name }}" required>
+
+            <label for="department">Department</label>
+            <input type="text" id="department" name="department" value="{{ student.department }}" required>
+
+            <label for="semester">Semester</label>
+            <input type="number" id="semester" name="semester" value="{{ student.semester }}" required>
+
+            <label for="credits">Credits</label>
+            <input type="number" id="credits" name="credits" value="{{ student.credits }}" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" value="{{ student.dob }}" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{ student.email }}" required>
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" value="{{ student.phone }}">
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address">{{ student.address }}</textarea>
+
+            <label for="enrollment_year">Enrollment Year</label>
+            <input type="number" id="enrollment_year" name="enrollment_year" value="{{ student.enrollment_year }}" required>
+
+            <label for="course_name">Course Name</label>
+            <input type="text" id="course_name" name="course_name" value="{{ student.course_name }}" required>
+
+            <input type="submit" value="Update Student">
+        </form>
+        <nav>
+            <ul>
+                <li><a href="/view_students">Back to Student List</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Attendance Data</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Attendance Data for Student ID: {{ student_id }}</h1>
+        <div>
+            <img src="data:image/png;base64,{{ plot_url }}" alt="Attendance Chart">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/view_students">Back to Student List</a></li>
+                <li><a href="/mark_attendance">Mark Attendance</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

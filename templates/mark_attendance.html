@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Mark Attendance</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Mark Attendance</h1>
+        <form action="/mark_attendance" method="POST">
+            <label for="student_id">Student</label>
+            <select id="student_id" name="student_id" required>
+                {% for student in students %}
+                <option value="{{ student[0] }}">{{ student[1] }} ({{ student[0] }})</option>
+                {% endfor %}
+            </select>
+
+            <label for="course_name">Course</label>
+            <select id="course_name" name="course_name" required>
+                {% for course in courses %}
+                <option value="{{ course[0] }}">{{ course[0] }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="status">Status</label>
+            <select id="status" name="status" required>
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+            </select>
+
+            <input type="submit" value="Mark Attendance">
+        </form>
+    </div>
+</body>
+</html>
