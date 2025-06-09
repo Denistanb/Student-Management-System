@@ -26,7 +26,7 @@ A lightweight, web‑based Student Management application built with **Python (F
 ---
 
 ## 🗂️ Project Structure
-
+`
 Student-Management-System/
 │
 ├── app.py              # Main Flask application
@@ -40,7 +40,7 @@ Student-Management-System/
 └── static/             # Static files (CSS/JS)
     ├── styles.css
     └── scripts.js
-
+`
 ---
 
 ## 🔧 Getting Started
